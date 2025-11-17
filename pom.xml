@@ -4,7 +4,7 @@
   <groupId>com.mytux.st1</groupId>
   <artifactId>vlc1</artifactId>
   <packaging>jar</packaging>
-  <version>1.0</version>
+  <version>6.0</version>
   <name>vlc1</name>
   <url>http://maven.apache.org</url>
   <dependencies>
@@ -16,6 +16,26 @@
     </dependency>
   </dependencies>
 
+
+  <properties>
+    <sonar.host.url>http://192.168.10.33:9000</sonar.host.url>
+    <sonar.login>admin</sonar.login>
+    <sonar.password>admin1</sonar.password>
+</properties>
+
+
+ <distributionManagement>
+    <repository>
+      <id>release-repo</id>
+      <name>release-repo</name>
+      <url>http://192.168.0.32:8081/repository/release-repo/</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapRepo</id>
+      <name>snapRepo</name>
+      <url>http://192.168.0.32:8081/repository/snapRepo/</url>
+    </snapshotRepository>
+  </distributionManagement>
  
 <build>
 <plugins>
